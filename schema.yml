@@ -1,0 +1,12 @@
+title: "Minecraft"
+description: "Deploy a private Minecraft server"
+schemaVersion: 1.0.0
+locale: "en"
+
+variables:
+  availability_domain_name:
+    type: oci:identity:availabilitydomain:name
+    dependsOn:
+      compartmentId: tenancy_ocid
+    required: true
+    title: Availability Domain
