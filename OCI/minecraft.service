@@ -1,0 +1,13 @@
+[Unit]
+Description=Minecraft Server
+After=network.target
+
+[Service]
+Type=forking
+User=mcuser
+WorkingDirectory=/opt/minecraft
+ExecStart=/bin/bash /opt/minecraft/startup.sh
+ExecStop=/usr/bin/tmux send-keys -t minecraft C-c
+
+[Install]
+WantedBy=multi-user.target
