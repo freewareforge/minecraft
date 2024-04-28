@@ -14,7 +14,7 @@ if [ ! -f initialized ]; then
     echo "$MINECRAFT_USERNAME will be made server admin."
 
     # Download the Minecraft server jar
-    wget --tries=5 --waitretry=10 --read-timeout=30 -O server.jar https://piston-data.mojang.com/v1/objects/8dd1a28015f51b1803213892b50b7b4fc76e594d/server.jar
+    wget --tries=5 --waitretry=10 --read-timeout=30 -O server.jar https://piston-data.mojang.com/v1/objects/79493072f65e17243fd36a699c9a96b4381feb91/server.jar
 
     # Run the Minecraft server
     java -Xmx4096M -Xms1024M -jar server.jar nogui
